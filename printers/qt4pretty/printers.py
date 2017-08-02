@@ -524,11 +524,8 @@ class QLinkedListPrinter:
 
         return "%sQLinkedList<%s>" % ( empty, self.itype )
 
-
-
 def register_qt4_printers():
     pp = gdb.printing.RegexpCollectionPrettyPrinter("qt4")
-    pp.add_printer('QString', '^QString$', QStringPrinter)
     pp.add_printer('QString', '^QString$', QStringPrinter)
     pp.add_printer('QByteArray', '^QByteArray$', QByteArrayPrinter)
     pp.add_printer('QList', '^QList$', QListPrinter)
